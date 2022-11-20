@@ -1,13 +1,11 @@
 def find_duplicate(nums):
-    if (len(nums) <= 1):
-        return False
-
     nums.sort()
     leng = len(nums)
 
     for i in range(0, leng):
         if (
-            not isinstance(nums[i], int)
+            leng <= 1
+            or not isinstance(nums[i], int)
             or nums[i] < 0
         ):
             return False
