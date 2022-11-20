@@ -12,7 +12,7 @@ def merge(char_set, start, end):
             )
 
     char_set[next_char + 1], char_set[end] = (
-        char_set[end], 
+        char_set[end],
         char_set[next_char + 1]
     )
 
