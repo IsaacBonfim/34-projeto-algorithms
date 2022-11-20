@@ -11,7 +11,10 @@ def merge(char_set, start, end):
                 char_set[i],
             )
 
-    char_set[next_char + 1], char_set[end] = (char_set[end], char_set[next_char + 1])
+    char_set[next_char + 1], char_set[end] = (
+        char_set[end], 
+        char_set[next_char + 1]
+    )
 
     return next_char + 1
 
@@ -32,7 +35,7 @@ def order_string(char_set):
 
 def order_word(string):
     char_set = list(string.lower())
-    
+
     order_string(char_set)
 
     ordered = "".join(char_set)
@@ -50,4 +53,3 @@ def is_anagram(first_string, second_string):
         result = False
 
     return (first_string_chars, second_string_chars, result)
-    
